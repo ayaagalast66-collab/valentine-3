@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container" id="main-card">
+        <div class="image-wrapper">
+            <img id="display-img" src="file:///C:/Users/OPENRACK/OneDrive/Desktop/New folder (2)/date.png" alt="Valentine Image">
+        </div>
+
+        <h1 class="question">Can I take u out on Date?</h1>
+
+        <div class="btn-group">
+            <button class="btn yes-btn" onclick="showThanks()">Yes</button>
+            <button class="btn no-btn" onmouseover="moveButton(this)" onclick="moveButton(this)">No</button>
+        </div>
+    </div>
+
+    <div class="thanks-screen" id="thanks-screen" style="display: none;">
+        <h1>Thank u for ur kindness! ❤️</h1>
+        <p>See you on Feb 14th!</p>
+    </div>
+
+    <script>
+        function showThanks() {
+            document.getElementById('main-card').style.display = 'none';
+            document.getElementById('thanks-screen').style.display = 'flex';
+        }
+
+        function moveButton(btn) {
+            const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+            btn.style.position = 'absolute';
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+/* تنسيق عام للجسم */
+body {
+    background-color: #fce4ec; /* Baby Pink */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* عشان زر No ميعملش Scroll وهو ببهرب */
+}
+
+/* الحاوية الأساسية */
+.container, .thanks-screen {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 0 10px 32px rgba(255, 182, 193, 0.3);
+    width: 90%;
+    max-width: 400px; /* لضمان ثبات الشكل على اللابتوب والموبايل */
+}
+
+/* تنسيق الصورة المرفوعة */
+.image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#display-img {
+    /* هنا تتحكمي في أبعاد الصورة */
+    width: 300px; 
+    height: 250px;
+    object-fit: cover; /* عشان الصورة متتمطش */
+    border-radius: 15px;
+    border: 5px solid white;
+}
+
+/* النص */
+.question {
+    color: #d81b60;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+/* الأزرار */
+.btn-group {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.yes-btn {
+    background-color: #f06292;
+    color: white;
+}
+
+.yes-btn:hover {
+    background-color: #e91e63;
+    transform: scale(1.1);
+}
+
+.no-btn {
+    background-color: #ffffff;
+    color: #f06292;
+}
+
+/* زر الرفع */
+.upload-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #fff;
+    border: 1px dashed #f06292;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+/* شاشة الشكر */
+.thanks-screen {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
